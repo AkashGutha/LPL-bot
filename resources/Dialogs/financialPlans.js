@@ -2,6 +2,7 @@ var builder = require("botbuilder");
 
 //Import regex functions
 var regexFunc = require("../regexFx");
+var PlanCards = require("./../Cards/PlansAdapticeCard");
 
 //All plan dialog
 const allPlans = {
@@ -10,28 +11,8 @@ const allPlans = {
     session.send(
       "What can I help you plan ? \n You can choose one of the following and I will use my futuristic intelligence to help you build a plan which will help you achieve your goals."
     );
-    var msg = new builder.Message(session);
-    msg.attachmentLayout(builder.AttachmentLayout.list);
-    msg.attachments([
-      new builder.HeroCard(session).buttons([
-        builder.CardAction.imBack(
-          session,
-          "retirement plans",
-          "Retirement Plans"
-        )
-      ]),
-      new builder.HeroCard(session).buttons([
-        builder.CardAction.imBack(session, "education plans", "Education Plans")
-      ]),
-
-      new builder.HeroCard(session).buttons([
-        builder.CardAction.imBack(session, "wedding plans", "Wedding Plans")
-      ]),
-
-      new builder.HeroCard(session).buttons([
-        builder.CardAction.imBack(session, "personal plans", "Personal Plans")
-      ])
-    ]);
+    var msg = new builder.Message(session).addAttachment(PlanCards);
+    
     session.send(msg);
     session.endDialog();
   }
