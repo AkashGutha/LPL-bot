@@ -12,19 +12,23 @@ module.exports = {
     actions: [
       {
         type: "Action.Submit",
-        title: "Wedding Plans"
+        title: "Wedding Plans",
+        data: "Wedding Plans"
       },
       {
         type: "Action.Submit",
-        title: "Retirement Plans"
+        title: "Retirement Plans",
+        data: "Retirement Plans"
       },
       {
         type: "Action.Submit",
-        title: "Education Plans"
+        title: "Education Plans",
+        data: "Education Plans"
       },
       {
         type: "Action.Submit",
-        title: "Personal Plans"
+        title: "Personal Plans",
+        data: "PersonalPlans"
       }
     ]
   }
