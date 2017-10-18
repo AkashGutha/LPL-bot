@@ -6,7 +6,7 @@ const helpDialog = {
   name: "helpDialog",
   dialogs: [
     function(session, args, next) {
-      if (!session.userData.profile || session.userData.profile == undefined) {
+      if (!session.userData.profile || session.userData.profile === undefined) {
         session.send(
           "Sorry I did not get that, Start by telling me your name!"
         );
