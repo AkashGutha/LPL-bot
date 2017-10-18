@@ -13,7 +13,7 @@ const allPlans = {
     var msg = new builder.Message(session);
     msg.attachmentLayout(builder.AttachmentLayout.list);
     msg.attachments([
-      new builder.ThumbnailCard(session).buttons([
+      new builder.HeroCard(session).buttons([
         builder.CardAction.imBack(
           session,
           "retirement plans",
@@ -24,7 +24,7 @@ const allPlans = {
         builder.CardAction.imBack(session, "education plans", "Education Plans")
       ]),
 
-      new builder.ThumbnailCard(session).buttons([
+      new builder.HeroCard(session).buttons([
         builder.CardAction.imBack(session, "wedding plans", "Wedding Plans")
       ]),
 
