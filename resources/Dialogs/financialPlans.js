@@ -32,7 +32,8 @@ const allPlans = {
         builder.CardAction.imBack(session, "personal plans", "Personal Plans")
       ])
     ]);
-    session.send(msg).endDialog();
+    session.send(msg);
+    session.endDialog();
   }
 };
 
