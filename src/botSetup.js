@@ -19,6 +19,12 @@ server.listen(process.env.port || process.env.PORT || 3978, function() {
   console.log("%s listening to %s", server.name, server.url);
 });
 
+// add the pubic directory to serve as the direct testing application
+server.get('/', restify.plugins.serveStatic({
+  directory: './public',
+  default: 'index.html'
+}))
+
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
   appId: process.env.MICROSOFT_APP_ID, //Currently using my credentials @BhomitB
