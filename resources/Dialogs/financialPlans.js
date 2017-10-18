@@ -8,7 +8,7 @@ const allPlans = {
   name: "allPlans",
   dialog: function(session) {
     session.send(
-      "What can I help you plan ? <br> You can choose one of the following and I will use my futuristic intelligence to help you build a plan which will help you achieve your goals."
+      "What can I help you plan ? \n You can choose one of the following and I will use my futuristic intelligence to help you build a plan which will help you achieve your goals."
     );
     var msg = new builder.Message(session);
     msg.attachmentLayout(builder.AttachmentLayout.list);

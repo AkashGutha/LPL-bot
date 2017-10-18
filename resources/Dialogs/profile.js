@@ -24,7 +24,7 @@ const profileDialog = {
             //If name entity is not null, and no user name is stored and entity is not undefined
             session.userData.profile.name = nameEntity.entity;
             session.send(
-              "Welcome %s, <br> Immersive Portfolio Bot helps you build a smarter future.",
+              "Welcome %s, \n Immersive Portfolio Bot helps you build a smarter future.",
               session.userData.profile.name
             );
             next();
