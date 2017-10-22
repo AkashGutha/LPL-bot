@@ -35,11 +35,6 @@ exports.allActions = {
       type: "Action.Submit",
       title: "Personal Plans",
       data: "Personal Plans"
-    },
-    {
-      type: "Action.OpenUrl",
-      title: "Get your personalized plan",
-      url: "http://google.com"
     }
   ]
 };
