@@ -27,7 +27,7 @@ server.get('/', restify.plugins.serveStatic({
 
 server.get('/pdf', restify.plugins.serveStatic({
   directory: './public',
-  default: 'Personalized Plans.pdf'
+  default: 'plans.pdf'
 }))
 
 // Create chat connector for communicating with the Bot Framework Service
