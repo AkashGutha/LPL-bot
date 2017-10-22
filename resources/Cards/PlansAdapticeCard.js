@@ -6,15 +6,10 @@ exports.allActions = {
     type: "AdaptiveCard",
     body: [
       {
-        type: "container",
-        items: [
-          {
-            type: "TextBlock",
-            text: "Plans",
-            size: "large",
-            weight: "bolder"
-          }
-        ]
+        type: "TextBlock",
+        text: "Plans",
+        size: "large",
+        weight: "bolder"
       }
     ],
     actions: [
@@ -51,7 +46,7 @@ exports.getPersonalizedDoc = {
     body: [
       {
         type: "TextBlock",
-        text: "Plans",
+        text: "Your personalized plan",
         size: "large",
         weight: "bolder"
       }
