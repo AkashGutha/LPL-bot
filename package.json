@@ -24,6 +24,7 @@
     "botbuilder": "^3.8.4",
     "dotenv": "^4.0.0",
     "microsoft-adaptivecards": "^0.6.1",
+    "mime": "^2.0.3",
     "restify": "^5.0.0"
   }
 }
