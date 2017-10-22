@@ -11,9 +11,9 @@ const allPlans = {
     session.send(
       "What can I help you plan ? \n You can choose one of the following and I will use my futuristic intelligence to help you build a plan which will help you achieve your goals."
     );
-    var msg = new builder.Message(session).addAttachment(PlanCards);
+    var msg = new builder.Message(session).addAttachment(PlanCards.allActions);
     session.send(msg);
-    
+
     session.endDialog();
   }
 };

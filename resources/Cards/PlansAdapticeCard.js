@@ -1,4 +1,4 @@
-module.exports = {
+exports.allActions = {
   contentType: "application/vnd.microsoft.card.adaptive",
   content: {
     speak: "Plan your future with us, by choosing, one of the following plans",
@@ -32,6 +32,11 @@ module.exports = {
         type: "Action.Submit",
         title: "Personal Plans",
         data: "PersonalPlans"
+      },
+      {
+        type: "Action.OpenUrl",
+        title: "Get your personalized plan",
+        url: "http://google.com"
       }
     ]
   }
