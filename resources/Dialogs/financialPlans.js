@@ -38,6 +38,7 @@ const retirePlanDialog = {
         session.userData.profile.timeFrame = timeFrame;
         console.log(session.userData.profile);
         session.send("Building plan that suits your profile......");
+        sendDoc(session);
       }
     }
   ]
@@ -58,6 +59,7 @@ const eduPlanDialog = {
       session.userData.profile.timeFrame = timeFrame;
       console.log(session.userData.profile);
       session.send("Building plan that suits your profile......");
+      sendDoc(session);
     }
   ]
 };
@@ -74,6 +76,7 @@ const wedPlanDialog = {
       session.userData.profile.timeFrame = timeFrame;
       console.log(session.userData.profile);
       session.send("Building plan that suits your profile......");
+      sendDoc(session);
     }
   ]
 };
@@ -94,9 +97,17 @@ const perPlanDialog = {
       session.userData.profile.timeFrame = timeFrame;
       console.log(session.userData.profile);
       session.send("Building plan that suits your profile......");
+      sendDoc(session);
     }
   ]
 };
+
+function sendDoc(session) {
+  var msg = new builder.Message(session).addAttachment(PlanCards.allActions);
+  session.send(msg);
+
+  session.endDialog();
+}
 module.exports = {
   all: allPlans,
   retirement: retirePlanDialog,
