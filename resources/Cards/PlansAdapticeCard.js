@@ -1,12 +1,15 @@
 module.exports = {
   contentType: "application/vnd.microsoft.card.adaptive",
   content: {
-    $schema: "http://adaptivecards.io/schemas/adaptive-card.json",
+    speak: "Plan your future with us, by choosing, one of the following plans",
     type: "AdaptiveCard",
     version: "1.0",
     body: [
       {
-        type: "container"
+        type: "TextBlock",
+        text: "Plans",
+        size: "large",
+        weight: "bolder"
       }
     ],
     actions: [
