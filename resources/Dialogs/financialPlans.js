@@ -103,7 +103,7 @@ const perPlanDialog = {
 };
 
 function sendDoc(session) {
-  var msg = new builder.Message(session).addAttachment(PlanCards.allActions);
+  var msg = new builder.Message(session).addAttachment(PlanCards.getPersonalizedDoc);
   session.send(msg);
 
   session.endDialog();

@@ -25,6 +25,11 @@ server.get('/', restify.plugins.serveStatic({
   default: 'index.html'
 }))
 
+server.get('/pdf', restify.plugins.serveStatic({
+  directory: './public',
+  default: 'Personalized Plans.pdf'
+}))
+
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
   appId: process.env.MICROSOFT_APP_ID, //Currently using my credentials @BhomitB
