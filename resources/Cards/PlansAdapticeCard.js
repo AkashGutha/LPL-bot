@@ -46,9 +46,7 @@ exports.getPersonalizedDoc = {
     body: [
       {
         type: "TextBlock",
-        text: "Your personalized plan",
-        size: "large",
-        weight: "bolder"
+        text: "Your personalized plan"
       }
     ],
     actions: [
