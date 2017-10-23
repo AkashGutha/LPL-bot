@@ -17,7 +17,7 @@ const profileDialog = {
         console.log(args);
         var nameEntity = builder.EntityRecognizer.findEntity(
           args.entities,
-          "UserName"
+          "Username"
         );
 
         if (nameEntity) {
@@ -40,7 +40,7 @@ const profileDialog = {
       } else if (session.userData.profile.name) {
         var diffNameEntity = builder.EntityRecognizer.findEntity(
           args.entities,
-          "UserName"
+          "Username"
         );
         if (diffNameEntity.entity === session.userData.profile.name) {
           session.send(

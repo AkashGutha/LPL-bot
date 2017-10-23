@@ -13,7 +13,6 @@ const allPlans = {
     );
     var msg = new builder.Message(session).addAttachment(PlanCards.allActions);
     session.send(msg);
-
     session.endDialog();
   }
 };
@@ -103,7 +102,9 @@ const perPlanDialog = {
 };
 
 function sendDoc(session) {
-  var msg = new builder.Message(session).addAttachment(PlanCards.getPersonalizedDoc);
+  var msg = new builder.Message(session).addAttachment(
+    PlanCards.getPersonalizedDoc
+  );
   session.send(msg);
 
   session.endDialog();
